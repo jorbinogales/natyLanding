@@ -1,0 +1,41 @@
+<div class="bg-gray body">
+  <carousel 
+  class="m-auto" 
+  [arrowsOutside]="true" 
+  [cellsToShow]="3" 
+  [height]="400" 
+  [cellWidth]="400" 
+  [loop]="true" 
+  style="position: relative; max-width: 1200px; margin-top:0px !important;">
+      <div 
+      class="carousel-cell" 
+      *ngFor="let image of images"
+      [style.transform]="color">
+        <div style="display:block;">
+          <img 
+          class="img-package"
+          src="{{ image.path }}">
+          <img 
+          class="img-fruta"
+          style="
+          opacity: 0;
+          height:300px !important;
+          position:absolute !important; 
+          top: none !important;
+          bottom:-65px !important; 
+          right:-50px !important; 
+          width: 300px;"
+          src="{{ image.path_fruta }}">  
+        </div>
+      </div>
+  </carousel>
+
+  <h2 class="text-gray monserrat_black text-center">PRODUCTOS DE ALTA CALIDAD<br>
+    Y ROTACIÓN PARA TU NEGOCIO 
+  </h2>
+  <p class="text-gray poppins_semi_bold text-center">
+    Somos una galletería industrial, conasi 20 años de trayectoria en el mercado<br>
+    venezolano, y que día a día trabajamos por construir el futuro que queremos
+  </p>
+</div>
+
