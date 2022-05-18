@@ -5,6 +5,8 @@ import { InitComponent } from './init/init.component';
 import { HeaderComponent } from './init/header/header.component';
 import { BodyComponent } from './init/body/body.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -14,10 +16,15 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     BodyComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     HomeRouting,
-    IvyCarouselModule
+    IvyCarouselModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    HttpClient,
+  ],
 })
 export class HomeModule { }

@@ -1,4 +1,4 @@
-<div class="header bg-red">
+<div class="header bg-red" id="header">
     <img 
     src="assets/img/banner-top.png" 
     class="w-100 d-block d-lg-none">
@@ -19,13 +19,28 @@
                     Comercializa<br>
                     Nuestros Productos
                 </h3>
-                <form action="">
+                <div 
+                *ngIf="success"
+                class="alert alert-success" 
+                role="alert">
+                   Sus datos han sido registrados
+                </div>
+                <div 
+                *ngIf="success"
+                class="alert alert-danger" 
+                role="alert">
+                   Hubo un problema al registrar sus datos
+                </div>
+                <form
+                *ngIf="loading == false"
+                [formGroup]="form" (submit)="createPeople()">
                     <div class="input">
                         <input 
                         type="text"
                         placeholder="Nombre y Apellido" 
                         id="fullname"
-                        name="fullname">
+                        name="fullname"
+                        formControlName="fullname">
                     </div>
                     <div class="input">
                         <input 
@@ -33,6 +48,7 @@
                         id="Business"
                         name="business"
                         placeholder="Empresa"
+                        formControlName="business"
                         >
                     </div>
                     <div class="input">
@@ -42,6 +58,7 @@
                             id="email"
                             name="email"
                             placeholder="Correo electrónico"
+                            formControlName="email"
                             >
                         </div>
                     </div>
@@ -52,6 +69,7 @@
                             id="Correo electrónico"
                             name="email"
                             placeholder="Teléfono"
+                            formControlName="phone"
                             >
                         </div>
                     </div>
@@ -59,8 +77,34 @@
                         <div class="input">
                             <select 
                             name="state"
-                            id="state">
-                                <option>Selecciona un Estado</option>
+                            id="state"
+                            formControlName="state"
+                            name="state">
+                                <option value="" disabled="" selected="">Selecciona un Estado</option>
+                                <option value="Amazonas">Amazonas</option>
+                                <option value="Anzoátegui">Anzoátegui</option>
+                                <option value="Apure">Apure</option>
+                                <option value="Aragua">Aragua</option>
+                                <option value="Barinas">Barinas</option>
+                                <option value="Bolívar">Bolívar</option>
+                                <option value="Carabobo">Carabobo</option>
+                                <option value="Cojedes">Cojedes</option>
+                                <option value="Delta Amacuro">Delta Amacuro</option>
+                                <option value="Distrito Capital">Distrito Capital</option>
+                                <option value="Falcón">Falcón</option>
+                                <option value="Guárico">Guárico</option>
+                                <option value="La Guaira">La Guaira</option>
+                                <option value="Lara">Lara</option>
+                                <option value="Mérida">Mérida</option>
+                                <option value="Miranda">Miranda</option>
+                                <option value="Monagas">Monagas</option>
+                                <option value="Nueva Esparta">Nueva Esparta</option>
+                                <option value="Portuguesa">Portuguesa</option>
+                                <option value="Sucre">Sucre</option>
+                                <option value="Táchira">Táchira</option>
+                                <option value="Trujillo">Trujillo</option>
+                                <option value="Yaracuy">Yaracuy</option>
+                                <option value="Zulia">Zulia</option>
                             </select>
                         </div>
                     </div>
@@ -77,7 +121,7 @@
             <img src="assets/img/leche_circular.png" class="w-100" id="leche-circular">
         </div>
     </div>
-    <div id="bg-inicio">
+    <div id="bg-inicio" class="d-none d-lg-block">
         <img src="assets/img/inicio.png" class="w-100 d-block">      
     </div>
     <div 

@@ -12,6 +12,18 @@
 }
 
 @font-face {
+  font-family: 'Poppins Bold';
+  src: url('assets/fonts/Poppins/Poppins-Bold.ttf');
+}
+
+
+@font-face {
+  font-family: 'Poppins Extrabold';
+  src: url('assets/fonts/Poppins/Poppins-ExtraBold.ttf');
+}
+
+
+@font-face {
   font-family: 'Monserrat Black';
   src: url('assets/fonts/Monserrat/Montserrat-Black.woff');
 }
@@ -20,11 +32,12 @@
 :root{
   --color-red: #E20613;
   --color-gray: #EFEFEF;
+  --color-text-gray: #666666;
   --color-blue: #1A88CA;
   --color-green: #8CB91E;
   --color-violet: #90217D;
   --color-orange: #FE922B;
-  --color-red-light: #e04b4d;
+  --color-red-light: #E1251B;
   --color-brown: #B07A4D;
 }
 
@@ -33,16 +46,32 @@
   background: linear-gradient(90deg, rgba(174,12,21,1)  0%, rgba(226,6,19,1) 100%);
 }
 
+.bg-red-light{
+  background-color: var(--color-red-light);
+}
+
 .bg-gray{
   background-color: var(--color-gray);
 }
 
+.text-red-light{
+  color: var(--color-red-light) !important;
+}
+
 .text-gray{
-  color: var(--bg-gray) !important;
+  color: var(--color-text-gray) !important;
 }
 
 .poppins_semi_bold{
   font-family: 'Poppins semibold';
+}
+
+.poppins_bold{
+  font-family: 'Poppins Bold';
+}
+
+.poppins_extra_bold{
+  font-family: 'Poppins Extrabold';
 }
 
 .poppins_regular{
@@ -54,6 +83,8 @@
   font-weight: 700;
   font-style: normal;
 }
+
+
 
 .monserrat_black{
   font-family: 'Monserrat Black';
@@ -88,3 +119,31 @@
   color:white; 
 }
 
+.btn-white{
+  background-color: white !important;
+  border:2px;
+  border-color:white;
+  border-style:solid;
+  color:var(--color-red-light);
+}
+
+.socials{
+  position:relative;
+  display:flex;
+  flex-wrap: wrap;
+  list-style:none;
+  width:100%;
+  max-width: 500px;
+  margin:auto;
+  margin-top:50px;
+}
+
+.socials li{
+  margin:auto;
+}
+
+.socials img{
+  display:block;
+  width: 100%;
+  max-width:50px;
+}
