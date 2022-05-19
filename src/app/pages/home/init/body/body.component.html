@@ -6,7 +6,7 @@
   [height]="400" 
   [cellWidth]="400" 
   [loop]="true" 
-  style="position: relative; max-width: 1200px; margin-top:0px !important;">
+  style="position: relative; max-width: 1200px; top:-100px !important;">
       <div 
       class="carousel-cell" 
       *ngFor="let image of images"
@@ -30,14 +30,42 @@
       </div>
   </carousel>
 
-  <h2 class="text-gray monserrat_black text-center mt-3">
-    PRODUCTOS DE ALTA CALIDAD<br>
-    Y ROTACIÓN PARA TU NEGOCIO 
-  </h2>
-  <p class="text-gray poppins_semi_bold text-center">
-    Somos una galletería industrial, conasi 20 años de trayectoria en el mercado<br>
-    venezolano, y que día a día trabajamos por construir el futuro que queremos
-  </p>
+  <div class="carousel-text">
+    <h2 class="text-gray monserrat_black text-center position-relative">
+      PRODUCTOS DE ALTA CALIDAD<br>
+      Y ROTACIÓN PARA TU NEGOCIO 
+    </h2>
+    <p class="text-gray poppins_semi_bold text-center position-relative">
+      Somos una galletería industrial, con casi 20 años de trayectoria en el mercado<br>
+      venezolano, y que día a día trabajamos por construir el futuro que queremos
+    </p>
+  </div>
+ 
+
+  <div class="row m-auto p-0 d-block d-lg-none">
+    <div class="col-12" *ngFor="let image of images">
+      <div 
+      class="carousel-cell" 
+      style="display:block; position:relative; overflow:hidden">
+        <img 
+        class="img-package w-100"
+        src="{{ image.path }}">
+        <h3 class="text-gray poppins_semi_bold ml-5" style="margin-top:-15px;" [innerHTML]="image.text">
+        </h3>
+        <img 
+        class="img-fruta"
+        style="
+        opacity: 0;
+        height:300px !important;
+        position:absolute !important; 
+        top: none !important;
+        bottom:-65px !important; 
+        right:-50px !important; 
+        width: 300px;"
+        src="{{ image.path_fruta }}">  
+      </div>
+    </div>
+  </div>
 
   <img src="assets/img/vector.png" class="w-100">
 

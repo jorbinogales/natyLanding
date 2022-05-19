@@ -61,8 +61,23 @@
   position:absolute;
 }
 
+.carousel-text{
+  position:relative;
+  top:-100px;
+}
+
 @media only screen and (max-width:968px){
   h2{
     font-size:25px;
+  }
+
+  .carousel-text{
+    position:relative;
+    top:0px;
+  }
+
+  .carousel-text p{
+    max-width:300px;
+    margin:auto;
   }
 }
