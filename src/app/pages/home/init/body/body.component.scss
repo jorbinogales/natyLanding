@@ -71,6 +71,20 @@
 }
 
 @media only screen and (max-width:968px){
+
+  .img-package{
+    display:block;
+    margin:auto;
+    width: 70% !important;
+  }
+
+  .img-fruta{
+    bottom:35px !important;
+    right:15px !important;
+    width:175px !important;
+    height:175px !important;
+  }
+
   h2{
     font-size:25px;
   }
@@ -78,10 +92,17 @@
   .carousel-text{
     position:relative;
     top:0px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
-  .carousel-text p{
-    max-width:300px;
-    margin:auto;
+  .carousel-text h2{
+    font-size:23px;
+  }
+
+
+
+  .category{
+    min-height:200px;
   }
 }

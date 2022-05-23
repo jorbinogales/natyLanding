@@ -35,9 +35,16 @@
       PRODUCTOS DE ALTA CALIDAD<br>
       Y ROTACIÓN PARA TU NEGOCIO 
     </h2>
-    <p class="text-gray poppins_semi_bold text-center position-relative">
+   
+    <p class="text-gray poppins_semi_bold text-center position-relative d-none d-lg-block">
       Somos una galletería industrial, con casi 20 años de trayectoria en el mercado<br>
-      venezolano y que día a día trabajamos por construir el futuro que queremos.
+      venezolano, que día a día trabajamos por construir el futuro que queremos.
+    </p>
+    <p class="text-gray poppins_semi_bold text-center position-relative d-block d-lg-none">
+      Somos una galletería industrial, con<br>
+      asi 20 años de trayectoria en el mercado<br>
+      venezolano, que día a día trabajamos<br>
+      por construir el futuro que queremos.<br>
     </p>
   </div>
  
@@ -48,20 +55,17 @@
       class="carousel-cell" 
       style="display:block; position:relative; overflow:hidden">
         <img 
-        class="img-package w-100"
+        class="img-package"
         src="{{ image.path }}">
-        <h3 class="text-gray poppins_semi_bold ml-5" style="margin-top:-15px;" [innerHTML]="image.text">
+        <h3 class="text-gray poppins_semi_bold ml-5 mt-3" style="margin-top:-15px;" [innerHTML]="image.text">
         </h3>
         <img 
         class="img-fruta"
         style="
         opacity: 0;
-        height:300px !important;
         position:absolute !important; 
         top: none !important;
-        bottom:-65px !important; 
-        right:-50px !important; 
-        width: 300px;"
+        "
         src="{{ image.path_fruta }}">  
       </div>
     </div>
@@ -211,7 +215,7 @@
   <div class="bg-red-light position-relative">
     <h2 class="text-gray text-center monserrat_black d-none d-lg-block"
     style="position:absolute;top:0; left:0; right:0;">
-      ¡SE NUESTRO ALIADO COMERCIAL HOY <br> Y POTENCIA TUS VENTAS!
+      ¡SÉ NUESTRO ALIADO COMERCIAL HOY <br> Y POTENCIA TUS VENTAS!
     </h2>
     <img src="assets/img/banner-gray-bottom.png" class="w-100">
   </div>

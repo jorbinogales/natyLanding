@@ -90,7 +90,21 @@
   }
 }
 
+@media only screen and (max-width:964px){
+  
+  h1{
+    font-size:35px;
+    text-align:center;
+  }
+
+  h3{
+    font-size:23px !important;
+    text-align:center;
+  }
+}
+
 @media only screen and (min-width:1920px){
+
   #leche-circular{
     right: 450px;
   }
