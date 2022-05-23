@@ -100,9 +100,13 @@
     font-size:23px;
   }
 
-
-
   .category{
-    min-height:200px;
+    height: auto;
+    min-height: 0 !important;
+    margin-top:10px;
+  }
+
+  .category p{
+    margin-bottom:0px !important;
   }
 }
