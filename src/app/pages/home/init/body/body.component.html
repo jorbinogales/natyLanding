@@ -1,41 +1,27 @@
 <div class="bg-gray body">
-  <carousel 
-  class="m-auto d-none d-lg-block" 
-  [arrowsOutside]="true" 
-  [cellsToShow]="3" 
-  [height]="400" 
-  [cellWidth]="400" 
-  [loop]="true" 
-  style="position: relative; max-width: 1200px; top:-100px !important;">
-      <div 
-      class="carousel-cell" 
-      *ngFor="let image of images"
-      [style.transform]="color">
-        <div style="display:block;">
-          <img 
-          class="img-package"
-          src="{{ image.path }}">
-          <img 
-          class="img-fruta"
-          style="
+  <carousel class="m-auto d-none d-lg-block" [arrowsOutside]="true" [cellsToShow]="3" [height]="400" [cellWidth]="400"
+    [loop]="true" style="position: relative; max-width: 1200px; top:-100px !important;">
+    <div class="carousel-cell" *ngFor="let image of images">
+      <div style="display:block;">
+        <img class="img-package" src="{{ image.path }}" alt="image package naty {{image.path}}">
+        <img class="img-fruta" style="
           opacity: 0;
           height:300px !important;
           position:absolute !important; 
           top: none !important;
           bottom:-65px !important; 
           right:-50px !important; 
-          width: 300px;"
-          src="{{ image.path_fruta }}">  
-        </div>
+          width: 300px;" src="{{ image.path_fruta }}" alt="image package naty {{image.path_fruta}}">
       </div>
+    </div>
   </carousel>
 
   <div class="carousel-text">
-    <h2 class="text-gray monserrat_black text-center position-relative">
+    <h1 class="text-gray monserrat_black text-center position-relative" style="font-size: 30px">
       PRODUCTOS DE ALTA CALIDAD<br>
-      Y ROTACIÓN PARA TU NEGOCIO 
-    </h2>
-   
+      Y ROTACIÓN PARA TU NEGOCIO
+    </h1>
+
     <p class="text-gray poppins_semi_bold text-center position-relative d-none d-lg-block">
       Somos una galletería industrial, con casi 20 años de trayectoria en el mercado<br>
       venezolano, que día a día trabajamos por construir el futuro que queremos.
@@ -47,130 +33,105 @@
       por construir el futuro que queremos.<br>
     </p>
   </div>
- 
+
 
   <div class="row m-auto p-0 d-block d-lg-none">
     <div class="col-12" *ngFor="let image of images">
-      <div 
-      class="carousel-cell" 
-      style="display:block; position:relative; overflow:hidden">
-        <img 
-        class="img-package"
-        src="{{ image.path }}">
+      <div class="carousel-cell" style="display:block; position:relative; overflow:hidden">
+        <img class="img-package" src="{{ image.path }}" alt="image-naty-1">
         <h3 class="text-gray poppins_semi_bold ml-5 mt-3" style="margin-top:-15px;" [innerHTML]="image.text">
         </h3>
-        <img 
-        class="img-fruta"
-        style="
+        <img class="img-fruta" style="
         opacity: 0;
         position:absolute !important; 
         top: none !important;
-        "
-        src="{{ image.path_fruta }}">  
+        " src="{{ image.path_fruta }}" alt="image-naty-{{image.path_fruta}}">
       </div>
     </div>
   </div>
 
-  <img src="assets/img/vector.png" class="w-100">
+  <img src="assets/img/vector.png" class="w-100" alt="image-naty-banner">
 
   <h2 class="text-gray monserrat_black text-center">BENEFICIOS</h2>
 
   <div class="row" style="max-width:1200px; margin:auto; margin-top:100px;">
-      <div class="col-12 col-lg-4">
-        <div class="category">
-          <img 
-          src="assets/svg/icon-distribucion.svg" 
-          class="icon-category w-100"
-          >
-          <div class="category-text">
-            <h5  class="poppins_extra_bold text-gray">Distribución directa</h5>
-            <p  class="poppins_semi_bold text-gray">Contamos con una fuerza de
-              venta y logística con capacidad de atender de forma
-              directa al mercado larense.</p>
-          </div>
+    <div class="col-12 col-lg-4">
+      <div class="category">
+        <img src="assets/svg/icon-distribucion.svg" class="icon-category w-100" alt="distrubicion naty">
+        <div class="category-text">
+          <h5 class="poppins_extra_bold text-gray">Distribución directa</h5>
+          <p class="poppins_semi_bold text-gray">Contamos con una fuerza de
+            venta y logística con capacidad de atender de forma
+            directa al mercado larense.</p>
         </div>
       </div>
-      <div class="col-12 col-lg-4">
-        <div class="category">
-          <img 
-          src="assets/svg/icon-calidad.svg" 
-          class="icon-category w-100"
-          >
-          <div class="category-text">
-            <h5  class="poppins_extra_bold text-gray">Máxima calidad</h5>
-            <p  class="poppins_semi_bold text-gray">Productos elaborados bajo
-              los más estrictos estándares
-              de calidad e higiene.</p>
-          </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="category">
+        <img src="assets/svg/icon-calidad.svg" class="icon-category w-100" alt="naty calidad">
+        <div class="category-text">
+          <h5 class="poppins_extra_bold text-gray">Máxima calidad</h5>
+          <p class="poppins_semi_bold text-gray">Productos elaborados bajo
+            los más estrictos estándares
+            de calidad e higiene.</p>
         </div>
       </div>
+    </div>
 
-      <div class="col-12 col-lg-4">
-        <div class="category">
-          <img 
-          src="assets/svg/icon-despacho.svg" 
-          class="icon-category w-100"
-          >
-          <div class="category-text mt-0">
-            <h5  class="poppins_extra_bold text-gray">Rapidez en el despacho</h5>
-            <p  class="poppins_semi_bold text-gray">Nuestros procesos permiten
-              cubrir la demanda y hacer
-              entregas inmediatas a
-              nuestros aliados. </p>
-          </div>
+    <div class="col-12 col-lg-4">
+      <div class="category">
+        <img src="assets/svg/icon-despacho.svg" class="icon-category w-100">
+        <div class="category-text mt-0">
+          <h5 class="poppins_extra_bold text-gray">Rapidez en el despacho</h5>
+          <p class="poppins_semi_bold text-gray">Nuestros procesos permiten
+            cubrir la demanda y hacer
+            entregas inmediatas a
+            nuestros aliados. </p>
         </div>
       </div>
+    </div>
 
-      <div class="col-12 col-lg-4">
-        <div class="category mt-5 mt-lg-0">
-          <img 
-          src="assets/svg/icon-rentabilidad.svg" 
-          class="icon-category w-100"
-          >
-          <div class="category-text">
-            <h5  class="poppins_extra_bold text-gray">Más rentabilidad
-              para tu negocio</h5>
-            <p  class="poppins_semi_bold text-gray">
-              Brindamos ofertas, promociones y sorteos para
-              aumentar la rentabilidad
-              de nuestros clientes. 
-            </p>
-          </div>
+    <div class="col-12 col-lg-4">
+      <div class="category mt-5 mt-lg-0">
+        <img src="assets/svg/icon-rentabilidad.svg" class="icon-category w-100">
+        <div class="category-text">
+          <h5 class="poppins_extra_bold text-gray">Más rentabilidad
+            para tu negocio</h5>
+          <p class="poppins_semi_bold text-gray">
+            Brindamos ofertas, promociones y sorteos para
+            aumentar la rentabilidad
+            de nuestros clientes.
+          </p>
         </div>
       </div>
+    </div>
 
-      <div class="col-12 col-lg-4">
-        <div class="category mt-3 mt-lg-0">
-          <img 
-          src="assets/svg/icon-rotacion.svg" 
-          class="icon-category w-100"
-          >
-          <div class="category-text">
-            <h5  class="poppins_extra_bold text-gray">Alta rotación</h5>
-            <p  class="poppins_semi_bold text-gray">Productos con excelente
-              relación precio beneficio
-              que permiten una rápida
-              rotación en anaquel.</p>
-          </div>
+    <div class="col-12 col-lg-4">
+      <div class="category mt-3 mt-lg-0">
+        <img src="assets/svg/icon-rotacion.svg" class="icon-category w-100">
+        <div class="category-text">
+          <h5 class="poppins_extra_bold text-gray">Alta rotación</h5>
+          <p class="poppins_semi_bold text-gray">Productos con excelente
+            relación precio beneficio
+            que permiten una rápida
+            rotación en anaquel.</p>
         </div>
       </div>
+    </div>
 
-      <div class="col-12 col-lg-4">
-        <div class="category mb-5 mb-lg-0">
-          <img 
-          src="assets/svg/icon-variedad.svg" 
-          class="icon-category w-100"
-          >
-          <div class="category-text">
-            <h5  class="poppins_extra_bold text-gray">Amplia variedad</h5>
-            <p  class="poppins_semi_bold text-gray">Nuestro portafolio de
-              productos incluye 13 sabores
-              diferentes de galletas para
-              satisfacer los gustos de
-              distintos públicos.</p>
-          </div>
+    <div class="col-12 col-lg-4">
+      <div class="category mb-5 mb-lg-0">
+        <img src="assets/svg/icon-variedad.svg" class="icon-category w-100">
+        <div class="category-text">
+          <h5 class="poppins_extra_bold text-gray">Amplia variedad</h5>
+          <p class="poppins_semi_bold text-gray">Nuestro portafolio de
+            productos incluye 13 sabores
+            diferentes de galletas para
+            satisfacer los gustos de
+            distintos públicos.</p>
         </div>
       </div>
+    </div>
   </div>
 
   <img src="assets/img/banner-desktop.png" class="w-100 d-none d-lg-block">
@@ -180,76 +141,76 @@
     ¿ERES DUEÑO DE UN<br>NEGOCIO DE ALIMENTOS?
   </h2>
 
-  <div class="row"  
-      style="max-width:1000px; margin:auto; margin-top:50px;">
-      <div class="col-12 col-lg-6">
-        <div class="feature m-auto">
-          <img src="assets/svg/check-verde.svg">
-          <h2 class="myriad_pro_bold text-gray">Supermercado</h2>
-        </div>
+  <div class="row" style="max-width:1000px; margin:auto; margin-top:50px;">
+    <div class="col-12 col-lg-6">
+      <div class="feature m-auto">
+        <img src="assets/svg/check-verde.svg">
+        <h2 class="myriad_pro_bold text-gray">Supermercado</h2>
       </div>
-      <div class="col-12 col-lg-6">
-        <div class="feature m-auto">
-          <img src="assets/svg/check-purpura.svg">
-          <h2 class="myriad_pro_bold text-gray">Minimarket</h2>
-        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="feature m-auto">
+        <img src="assets/svg/check-purpura.svg">
+        <h2 class="myriad_pro_bold text-gray">Minimarket</h2>
       </div>
-      <div class="col-12 col-lg-6">
-        <div class="feature m-auto">
-          <img src="assets/svg/check-azul.svg">
-          <h2 class="myriad_pro_bold text-gray">Bodega</h2>
-        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="feature m-auto">
+        <img src="assets/svg/check-azul.svg">
+        <h2 class="myriad_pro_bold text-gray">Bodega</h2>
       </div>
-      <div class="col-12 col-lg-6">
-        <div class="feature m-auto">
-          <img src="assets/svg/check-naranja.svg">
-          <h2 class="myriad_pro_bold text-gray">Distribución <br> de Alimentos</h2>
-        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="feature m-auto">
+        <img src="assets/svg/check-naranja.svg">
+        <h2 class="myriad_pro_bold text-gray">Distribución <br> de Alimentos</h2>
       </div>
+    </div>
   </div>
 
   <h2 class="text-gray text-center monserrat_black d-block d-lg-none" style="font-size: 18px;">
-      ¡SÉ NUESTRO ALIADO COMERCIAL HOY <br> Y POTENCIA TUS VENTAS!
+    ¡SÉ NUESTRO ALIADO COMERCIAL HOY <br> Y POTENCIA TUS VENTAS!
   </h2>
 
   <div class="bg-red-light position-relative">
     <h2 class="text-gray text-center monserrat_black d-none d-lg-block"
-    style="position:absolute;top:0; left:0; right:0;">
+      style="position:absolute;top:0; left:0; right:0;">
       ¡SÉ NUESTRO ALIADO COMERCIAL HOY <br> Y POTENCIA TUS VENTAS!
     </h2>
     <img src="assets/img/banner-gray-bottom.png" class="w-100">
   </div>
-  
+
   <div class="row m-auto bg-red-light poppins_semi_bold">
     <div class="col-12 mt-5 mb-5">
       <a href="#header"
-      style="position:relative; font-size:25px; border-radius: 15px; margin-top:100px; max-width: 300px; text-align: center"
-      class="btn-white d-block m-auto pl-5 pr-5 pt-3 pb-3 poppins_bold">
+        style="position:relative; font-size:25px; border-radius: 15px; margin-top:100px; max-width: 300px; text-align: center"
+        class="btn-white d-block m-auto pl-5 pr-5 pt-3 pb-3 poppins_bold">
         Regístrate
       </a>
       <h4 class="text-white text-center mt-3">Y uno de nuestros vendedores se <br> pondrá en contacto contigo</h4>
     </div>
   </div>
 
-  <div class="row m-auto" >
+  <div class="row m-auto">
     <div class="col-12" style="margin-top:100px; padding-bottom:100px;">
-        <h2 class="monserrat_black text-gray text-center">¿QUIERES SABER MÁS?</h2>
-        <ul class="socials">
-            <li>
-              <img src="assets/svg/icon-tiktok.svg" onclick="window.location = 'https://www.tiktok.com/@natysvzla?lang=es'">
-            </li>
-            <li>
-              <img src="assets/svg/icon-facebook.svg" onclick="window.location = 'https://www.facebook.com/Natys-Venezuela-101006379273756'">
-            </li>
-            <li>
-              <img src="assets/svg/icon-instagram.svg" onclick="window.location = 'https://www.instagram.com/natysvzla/?hl=es'">
-            </li>
-            <li>
-              <h2 class="text-red-light myriad_pro_bold">@natysvzla</h2>
-            </li>
-        </ul>
+      <h2 class="monserrat_black text-gray text-center">¿QUIERES SABER MÁS?</h2>
+      <ul class="socials">
+        <li>
+          <img src="assets/svg/icon-tiktok.svg" onclick="window.location = 'https://www.tiktok.com/@natysvzla?lang=es'">
+        </li>
+        <li>
+          <img src="assets/svg/icon-facebook.svg"
+            onclick="window.location = 'https://www.facebook.com/Natys-Venezuela-101006379273756'">
+        </li>
+        <li>
+          <img src="assets/svg/icon-instagram.svg"
+            onclick="window.location = 'https://www.instagram.com/natysvzla/?hl=es'">
+        </li>
+        <li>
+          <h2 class="text-red-light myriad_pro_bold">@natysvzla</h2>
+        </li>
+      </ul>
     </div>
   </div>
 
 </div>
-

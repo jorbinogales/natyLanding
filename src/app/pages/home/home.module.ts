@@ -4,17 +4,12 @@ import { HomeRouting } from './home.routing';
 import { InitComponent } from './init/init.component';
 import { HeaderComponent } from './init/header/header.component';
 import { BodyComponent } from './init/body/body.component';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
-  declarations: [
-    InitComponent,
-    HeaderComponent,
-    BodyComponent,
-  ],
+  declarations: [InitComponent, HeaderComponent, BodyComponent],
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -23,8 +18,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     IvyCarouselModule,
     HttpClientModule,
   ],
-  providers: [
-    HttpClient,
-  ],
+  providers: [HttpClient],
 })
-export class HomeModule { }
+export class HomeModule {}
