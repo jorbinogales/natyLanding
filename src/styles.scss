@@ -29,6 +29,18 @@
 }
 
 
+@font-face {
+  font-family: 'Monserrat Regular';
+  src: url('assets/fonts/Monserrat/Montserrat-Regular.woff');
+}
+
+@font-face {
+  font-family: 'Monserrat Bold';
+  src: url('assets/fonts/Monserrat/Montserrat-Bold.woff');
+}
+
+
+
 :root{
   --color-red: #E20613;
   --color-gray: #EFEFEF;
@@ -89,6 +101,11 @@
 .monserrat_black{
   font-family: 'Monserrat Black';
 }
+
+.monserrat_bold{
+  font-family: 'Monserrat Bold';
+}
+
 
 .myriad_pro_bold_condensed{
   font-family: myriad-pro-condensed,sans-serif;

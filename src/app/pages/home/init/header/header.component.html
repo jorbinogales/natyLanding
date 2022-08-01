@@ -1,84 +1,53 @@
-<div class="header bg-red" id="header">
-    <img 
-    src="assets/img/banner-top.png" 
-    class="w-100 d-block d-lg-none">
+<div class="header bg-red-light" id="header">
+    <img src="assets/img/galleta1.png" id="galleta1">
+    <img src="assets/img/galleta2.png" id="galleta2">
+    <img src="assets/img/galleta3.png" id="galleta3">
+    <img src="assets/img/galleta4.png" id="galleta4">
+    <img src="assets/img/banner-top.png" class="w-100 d-block d-lg-none">
+    <img src="assets/img/hombre.png" class="w-100 d-none d-xl-inline-block" id="hombre">
     <div class="row p-0 m-0">
-        <div class="col-12 col-xl-6">
-            <img 
-            id="naty_logo"
-            src="assets/img/logo-blanco.png" 
-            alt="naty_logo" 
-            class="w-100 d-block mt-2">
+        <div class="col-0 col-lg-6">
+            <h2 class="monserrat_bold">Buscamos distribuidores</h2>
+            <h3 class="monserrat_bold">de consumo masivo a nivel nacional </h3>
+        </div>
+        <div class="col-12 col-lg-6">
             <div class="form mt-2 bg-gray">
-                <h1
-                class="text-gray d-block w-100 m-auto poppins_semi_bold">
+                <h1 class="text-gray d-block w-100 m-auto poppins_semi_bold">
                     Comercializa
                 </h1>
-                <h3 
-                class="text-gray d-block w-100 m-auto poppins_semi_bold">
+                <h3 class="text-gray d-block w-100 m-auto poppins_semi_bold">
                     nuestros productos
                 </h3>
-                <div 
-                *ngIf="success"
-                class="alert alert-success" 
-                role="alert">
-                   Sus datos han sido registrados
+                <div *ngIf="success" class="alert alert-success" role="alert">
+                    Sus datos han sido registrados
                 </div>
-                <div 
-                *ngIf="error"
-                class="alert alert-danger" 
-                role="alert">
+                <div *ngIf="error" class="alert alert-danger" role="alert">
                     Faltó completar algunos datos.
                 </div>
-                <form
-                *ngIf="loading == false"
-                [formGroup]="form" (submit)="createPeople()">
+                <form *ngIf="loading == false" [formGroup]="form" (submit)="createPeople()">
                     <div class="input">
-                        <input 
-                        type="text"
-                        placeholder="Nombre y Apellido" 
-                        id="fullname"
-                        name="fullname"
-                        formControlName="fullname">
+                        <input type="text" placeholder="Nombre y Apellido" id="fullname" name="fullname"
+                            formControlName="fullname">
                     </div>
                     <div class="input">
-                        <input 
-                        type="text" 
-                        id="Business"
-                        name="business"
-                        placeholder="Empresa"
-                        formControlName="business"
-                        >
+                        <input type="text" id="Business" name="business" placeholder="Empresa"
+                            formControlName="business">
                     </div>
                     <div class="input">
                         <div class="input">
-                            <input 
-                            type="email" 
-                            id="email"
-                            name="email"
-                            placeholder="Correo electrónico"
-                            formControlName="email"
-                            >
+                            <input type="email" id="email" name="email" placeholder="Correo electrónico"
+                                formControlName="email">
                         </div>
                     </div>
                     <div class="input">
                         <div class="input">
-                            <input 
-                            type="email" 
-                            id="Correo electrónico"
-                            name="email"
-                            placeholder="Teléfono"
-                            formControlName="phone"
-                            >
+                            <input type="email" id="Correo electrónico" name="email" placeholder="Teléfono"
+                                formControlName="phone">
                         </div>
                     </div>
                     <div class="input">
                         <div class="input">
-                            <select 
-                            name="state"
-                            id="state"
-                            formControlName="state"
-                            name="state">
+                            <select name="state" id="state" formControlName="state" name="state">
                                 <option value="" disabled="" selected="">Selecciona un Estado</option>
                                 <option value="Amazonas">Amazonas</option>
                                 <option value="Anzoátegui">Anzoátegui</option>
@@ -108,24 +77,13 @@
                         </div>
                     </div>
 
-                    <button 
-                    class="btn-red ml-auto mr-auto mt-4 pt-2 pb-2 pl-3 pr-3 d-block w-100">
+                    <button class="btn-red ml-auto mr-auto mt-4 pt-2 pb-2 pl-3 pr-3 d-block w-100">
                         REGÍSTRATE
                     </button>
                 </form>
             </div>
         </div>
-        <div class="col-12 col-xl-6 d-none d-xl-inline-block">
-            <img src="assets/img/galletas_circular.png" class="w-100" id="galleta-circular">
-            <img src="assets/img/leche_circular.png" class="w-100" id="leche-circular">
-        </div>
     </div>
-    <div id="bg-inicio" class="d-none d-xl-inline-block">
-        <img src="assets/img/inicio.png" class="w-100 d-block">      
-    </div>
-    <div 
-    class="curve-top"
-    style="background-image: url('assets/img/banner-gray-top.png')"
-    >
+    <div class="curve-top d-none d-lg-block" style="background-image: url('assets/img/banner-gray-top.png')">
     </div>
 </div>
