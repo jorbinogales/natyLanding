@@ -4,15 +4,7 @@
     [loop]="true" style="position: relative; max-width: 1200px; top:-100px !important;">
     <div class="carousel-cell" *ngFor="let image of images">
       <div style="display:block;">
-        <img class="img-package" src="{{ image.path }}" alt="image package naty {{image.path}}">
-        <img class="img-fruta" style="
-          opacity: 0;
-          height:300px !important;
-          position:absolute !important; 
-          top: none !important;
-          bottom:-65px !important; 
-          right:-50px !important; 
-          width: 300px;" src="{{ image.path_fruta }}" alt="image package naty {{image.path_fruta}}">
+        <img class="img-package" src="{{ image.path }}" alt="image package naty {{image.path}}">s
       </div>
     </div>
   </carousel>
@@ -42,11 +34,6 @@
         <img class="img-package" src="{{ image.path }}" alt="image-naty-1">
         <h3 class="text-gray poppins_semi_bold ml-5 mt-3" style="margin-top:-15px;" [innerHTML]="image.text">
         </h3>
-        <img class="img-fruta" style="
-        opacity: 0;
-        position:absolute !important; 
-        top: none !important;
-        " src="{{ image.path_fruta }}" alt="image-naty-{{image.path_fruta}}">
       </div>
     </div>
   </div>
@@ -190,7 +177,7 @@
 
   <div class="row m-auto">
     <div class="col-12" style="margin-top:100px; padding-bottom:100px;">
-      <h2 class="monserrat_black text-gray text-center">¿QUIERES SABER MÁS?</h2>
+      <h3 class="monserrat_bold text-gray text-center">¿QUIERES SABER MÁS?</h3>
       <ul class="socials">
         <li>
           <img src="assets/svg/icon-tiktok.svg" onclick="window.location = 'https://www.tiktok.com/@natysvzla?lang=es'">
